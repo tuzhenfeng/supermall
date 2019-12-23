@@ -1,0 +1,145 @@
+<template>
+  <div id="category">
+    <ul>
+      <button @click="btnitem">按钮</button>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+      <li>分类</li>
+    </ul>
+  </div>
+</template>
+
+<script>
+import BScroll from 'better-scroll'
+export default {
+  name:'category',
+  data(){
+    return {
+      scroll:null
+    }
+  },
+  mounted(){
+    this.scroll = new BScroll('#category',{
+      probeType:3,
+      pullUpLoad:true
+    })
+    this.scroll.on('scroll',(position)=>{
+      console.log(position)
+    })
+    this.scroll.on('pullingUp',()=>{
+      console.log('上拉加载更多')
+    })
+  },
+  methods:{
+    btnitem(){
+      console.log('点我')
+    }
+  }
+};
+</script>
+<style >
+#category{
+  height: 200px;
+  background-color: red;
+  overflow: hidden;
+  /* overflow-y: scroll; */
+}
+</style>
+
